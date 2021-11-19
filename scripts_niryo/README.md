@@ -22,3 +22,8 @@ Fonction de chaque programme :
 - take_photo_with_camera.py : programme similaire à prise_photo_temoin (sans doute l'original)
 - translation.py : test de la correction de positionnement en translation. Il n'y a pas de mouvements, seulement une comparaison entre une image prise sur le moment et l'image témoin pour ensuite afficher les écarts de posiiton des marqueurs.
 - which_hand.py : demonstrateur interactif ou le robot essaye de "deviner" dans quelle main de l'utilisateur se trouve l'objet. Le robot saisit ensuite l'objet pour comptabiliser les points.
+
+- ranger_and_corr2.py : permet de tester le test pour ranger un objet avec le bras.
+
+## Ce qui doit être mis à jour
+le programme ranger_and_corr2.py

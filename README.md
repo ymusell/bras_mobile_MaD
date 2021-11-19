@@ -6,12 +6,6 @@ Ce dépot contient les fichiers nécessaires au déploiement de l'ensemble Turtl
 
 Contenu :
 
-- catkin_ws : 
-
-workspace ROS disponible sur la machine virtuelle de la Chaire_M@D.
-Contient tous la plupart des packages permettant de contrôler la base mobile et le bras
-
-
 - DOCS :
 
 Documentation réalisée par le précédent stagiaire Killian Roland
@@ -35,6 +29,9 @@ Dossier contenant les scripts permettant de lancer des séquences simples afin d
 - src_web : 
 
 Dossier contenant les scripts nécessaires au lancement de l'interface web à l'aide du bootstrap. Il y a 2 versions de l'interface 
+
+
+TODO: lancement automatique des noeuds et accès faciles à ceux-ci.
 
 
 
