@@ -124,7 +124,7 @@ rate = rospy.Rate(10) # 10hz
 while abs(angle) > 0.3 :
   
   print "Go to observation position"
-  n.move_joints([-0.027, 0.373, -0.203, 0.04, -1.576, -2.566])
+  n.move_joints([-0.043, 0.245, -0.1, 0.066, -1.639, -2.566])
 
   n.wait(1)
   img = n.get_compressed_image()
@@ -173,7 +173,8 @@ while abs(angle) > 0.3 :
   # temoin4_x = 200
   # temoin4_y = 245
 
-  temoin = [[218,52],[411,56],[415,252],[200,245]]
+  # temoin = [[218,52],[411,56],[415,252],[200,245]]
+  temoin = [[223,311],[233,97],[439,318],[442,105]]
 
   test = []
 
@@ -195,7 +196,7 @@ while abs(angle) > 0.3 :
   lx = lx/4.0
   ly = ly/4.0
 
-  mm = 172.0/215.0/1.5 #Il y a 172mm entre le centre de deux marqueurs
+  mm = 172.0/(test[1][0]-test[0][0]) #Il y a 172mm entre le centre de deux marqueurs, rapport pixel/mm
 
   tx = mm*lx
   ty = mm*ly
@@ -231,7 +232,7 @@ while abs(angle) > 0.3 :
 # interaction = Niryo_Listener() 
 
 test_vision = False
-workspace = 'default_workspace'
+workspace = 'yann_workspace'
 
 #Boucle en attendant la detection d'un objet:
 while not (test_vision):

@@ -32,14 +32,24 @@ try:
 
     print "Go to observation position"
     n.move_joints([-0.027, 0.373, -0.203, 0.04, -1.576, -2.566])
+    # n.move_joints([-0.043, 0.245, -0.1, 0.066, -1.639, -2.566])
 
     n.wait(1)
     img = n.get_compressed_image()
     img = f(img)
 
-    filename = 'savedImage.jpg'
+    filename = 'savedImage2.jpg'
     cv2.imwrite(filename, img)
 
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    img_thresh = cv2.adaptiveThreshold(gray, maxValue=255, adaptiveMethod=cv2.ADAPTIVE_THRESH_MEAN_C,
+                          thresholdType=cv2.THRESH_BINARY, blockSize=15, C=25)
+
+    list_good_candidates = m.find_markers_from_img_thresh(img_thresh)
+    print(len(list_good_candidates))
+    for k in range (4):
+        print(list_good_candidates[k].cx , list_good_candidates[k].cy)
     n.activate_learning_mode(True)
 
 except NiryoOneException as e:

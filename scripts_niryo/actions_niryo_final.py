@@ -584,7 +584,7 @@ while abs(angle) > erreur_angle_lim :
 
 # CORPS DU PROGRAMME
 
-while(True) :
+while not rospy.is_shutdown():
 
   if interaction.ask == 10 :
     memo_action = 10
